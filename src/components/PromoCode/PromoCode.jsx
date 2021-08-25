@@ -61,11 +61,6 @@ class PromoCode extends Component {
             </Row>
           </div>
         </Collapse>
-
-        {/* <Row className="show-grid">
-          <Col md={6}></Col>
-          <Col md={6}></Col>
-        </Row> */}
       </div>
     );
   }

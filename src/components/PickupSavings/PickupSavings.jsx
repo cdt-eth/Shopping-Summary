@@ -21,6 +21,13 @@ const tooltip = (
 );
 
 export default class PickupSavings extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      totalSavings: 3.85,
+    };
+  }
+
   render() {
     return (
       <Row classname="show-grid">
