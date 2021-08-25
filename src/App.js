@@ -43,9 +43,7 @@ class App extends Component {
           <PickupSavings price={this.state.PickupSavings} />
           <TaxesFees taxes={this.state.taxes.toFixed(2)} />
           <hr />
-          <EstimatedTotal
-            estimatedTotal={this.state.estimatedTotal.toFixed(2)}
-          />
+          <EstimatedTotal price={this.state.estimatedTotal.toFixed(2)} />
           <ItemDetails price={this.state.estimatedTotal.toFixed(2)} />
           <hr />
           <PromoCode
