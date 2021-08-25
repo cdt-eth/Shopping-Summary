@@ -9,15 +9,20 @@ import {
   Row,
   Col,
 } from "react-bootstrap";
+import { connect } from "react-redux";
+import { handleChange } from "../../actions/promoCodeActions";
 
 class PromoCode extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: true,
-      value: "",
+      open: false,
     };
   }
+
+  handleChange = (e) => {
+    this.props.handleChange(e);
+  };
 
   render() {
     return (
@@ -42,7 +47,7 @@ class PromoCode extends Component {
                       type="text"
                       placeholder="Enter promo code"
                       value={this.props.promoCode}
-                      onChange={this.handChange}
+                      onChange={this.handleChange}
                     />
                   </FormGroup>
 
@@ -50,7 +55,7 @@ class PromoCode extends Component {
                     <Button
                       variant="success"
                       className="btn-round"
-                      disable={this.props.isDisable}
+                      disabled={this.props.isDisabled}
                       onClick={this.props.giveDiscount}
                     >
                       Apply
@@ -66,4 +71,8 @@ class PromoCode extends Component {
   }
 }
 
-export default PromoCode;
+const mapStateToProps = (state) => ({
+  promoCode: state.promoCode.value,
+});
+
+export default connect(mapStateToProps, { handleChange })(PromoCode);
