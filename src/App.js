@@ -30,7 +30,8 @@ class App extends Component {
           <EstimatedTotal
             estimatedTotal={this.state.estimatedTotal.toFixed(2)}
           />
-          <ItemDetails />
+          <ItemDetails price={this.state.estimatedTotal.toFixed(2)} />
+          <hr />
         </Container>
       </div>
     );
