@@ -21,6 +21,10 @@
   float: left;
 }
 
+.btn-round {
+  border-radius: 17px;
+}
+
 .price-strike {
   text-decoration-line: line-through;
   color: grey;
