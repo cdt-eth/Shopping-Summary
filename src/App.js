@@ -5,6 +5,7 @@ import Subtotal from "./components/Subtotal/Subtotal.jsx";
 import PickupSavings from "./components/PickupSavings/PickupSavings.jsx";
 import TaxesFees from "./components/TaxesFees/TaxesFees.jsx";
 import EstimatedTotal from "./components/EstimatedTotal/EstimatedTotal.jsx";
+import ItemDetails from "./components/ItemDetails/ItemDetails.jsx";
 
 class App extends Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class App extends Component {
           <EstimatedTotal
             estimatedTotal={this.state.estimatedTotal.toFixed(2)}
           />
+          <ItemDetails />
         </Container>
       </div>
     );
