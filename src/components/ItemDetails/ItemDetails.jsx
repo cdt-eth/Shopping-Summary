@@ -1,20 +1,17 @@
 import { Component } from "react";
 import { Button, Collapse, Row, Col } from "react-bootstrap";
-// import Media from "react-bootstrap/Media";
-// import Well from "react-bootstrap/Well";
 
 export default class ItemDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // open: false,
       open: true,
     };
   }
 
   render() {
     return (
-      <div>
+      <div class="d-grid gap-2">
         <Button
           className="item-details-button"
           variant="link"
@@ -48,11 +45,6 @@ export default class ItemDetails extends Component {
             </Row>
           </div>
         </Collapse>
-
-        {/* <Row className="show-grid">
-          <Col md={6}></Col>
-          <Col md={6}></Col>
-        </Row> */}
       </div>
     );
   }
